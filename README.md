@@ -1,7 +1,7 @@
-#基于SSMp并整合Redis和Roma的后端框架原型
+#基于SSMp并整合Redis的后端框架原型
 ####_——Coding Or Not, That Is The Question._
 ##项目名称释义
-SSMp_RR:Spring+SpringMVC+Mybatis-plus+Redis+Roma
+SSMp:Spring+SpringMVC+Mybatis-plus
 This branch is built for development of functions
 ##后端使用说明
 # CRUD 接口
