@@ -212,12 +212,12 @@ lambdaUpdate().eq(Entity::getId, value).update(entity);
 
 ## Mapper CRUD 接口
 
-::: tip 说明:
+ tip 说明:
 - 通用 CRUD 封装[BaseMapper](https://gitee.com/baomidou/mybatis-plus/blob/3.0/mybatis-plus-core/src/main/java/com/baomidou/mybatisplus/core/mapper/BaseMapper.java)接口，为 `Mybatis-Plus` 启动时自动解析实体表关系映射转换为 `Mybatis` 内部对象注入容器
 - 泛型 `T` 为任意实体对象
 - 参数 `Serializable` 为任意类型主键 `Mybatis-Plus` 不推荐使用复合主键约定每一张表都有自己的唯一 `id` 主键
 - 对象 `Wrapper` 为 [条件构造器](./wrapper.html)
-  :::
+
 
 ### Insert
 ``` java
@@ -298,11 +298,11 @@ Integer selectCount(@Param(Constants.WRAPPER) Wrapper<T> queryWrapper);
 
 ## mapper 层 选装件
 
-::: tip 说明:
+ tip 说明:
 选装件位于 `com.baomidou.mybatisplus.extension.injector.methods` 包下
 需要配合[Sql 注入器](sql-injector.md)使用,[案例](https://gitee.com/baomidou/mybatis-plus-samples/tree/master/mybatis-plus-sample-sql-injector)  
 使用详细见[源码注释](https://gitee.com/baomidou/mybatis-plus/tree/3.0/mybatis-plus-extension/src/main/java/com/baomidou/mybatisplus/extension/injector/methods)
-:::
+
 
 ### [AlwaysUpdateSomeColumnById](https://gitee.com/baomidou/mybatis-plus/blob/3.0/mybatis-plus-extension/src/main/java/com/baomidou/mybatisplus/extension/injector/methods/AlwaysUpdateSomeColumnById.java)
 ``` java
