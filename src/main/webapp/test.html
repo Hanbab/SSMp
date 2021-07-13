@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>hanbab_api</title>
+    <link rel="stylesheet" type="text/css" href="http://unpkg.com/view-design/dist/styles/iview.css">
+    <script type="text/javascript" src="http://vuejs.org/js/vue.min.js"></script>
+    <script type="text/javascript" src="http://unpkg.com/view-design/dist/iview.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>-->
+    <script src="js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+<div id="app">
+    <i-button @click="getOne">Test for connection</i-button>
+    <Modal v-model="visible" title="Welcome">Welcome to ViewUI</Modal>
+</div>
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            visible: false,
+            test: 0
+        },
+        methods: {
+            show: function () {
+                this.visible = true;
+            },
+            getOne:function (){
+                let vue = this;
+                $.ajax({
+                    type: 'GET',
+                    url: '/api/test/entries',
+                    data: {
+                    },
+                    success: function (data){
+                        vue.$Message.success('成功！');
+                        /*vue.$Message.success(data);*/
+                    },
+                    error: function () {
+                        vue.$Message.error('失败！');
+                    }
+                    }
+
+                )
+            }
+        }
+    })
+</script>
+</body>
+</html>
